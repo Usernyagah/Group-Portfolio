@@ -330,7 +330,59 @@ h6 i {
   .dark-mode .num-column p {
     color: #ccc;
   }
-  
+ 
+/* Success Section */
+.project-card {
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.project-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.project-image-wrapper img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.project-image-wrapper:hover img {
+    transform: scale(1.05);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* dark overlay */
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+.project-image-wrapper:hover .overlay {
+    opacity: 1;
+}
+
+.overlay-text h5 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.overlay-text p {
+    font-size: 0.95rem;
+}
 
 /* Footer */
 .footer {
